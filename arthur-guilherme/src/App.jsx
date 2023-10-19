@@ -1,11 +1,8 @@
-import SideBar from "./components/SideBar"
-
-
-
+import Banner from "./components/Banner"
 function App() {
   return (
     <>
-      <SideBar />
+     <Banner />
     </>
   )
 }
