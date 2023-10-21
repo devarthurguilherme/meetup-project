@@ -13,8 +13,6 @@ import {
 //Data
 import Events from "./Events";
 
-//Popular Now 35:26
-
 const Upcomming = () => {
   return (
     <Box mt="20">
