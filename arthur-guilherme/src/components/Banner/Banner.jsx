@@ -25,7 +25,7 @@ import ImageThree from "../../assets/image-three.jpg";
 
 //Data
 import BadgeText from './BadgetText';
-
+//50:35
 
 const Banner = () => {
   return (
@@ -67,7 +67,15 @@ const Banner = () => {
         </header>
         <Box>
             <Container maxWidth="container.xl">
-                <Flex d="flex" alignItems="center" py="20">
+                <Flex 
+                    alignItems="center" 
+                    py="20"
+                    flexDirection={{
+                        sm: "column",
+                        md: "row",
+                        base: "column"
+                    }}
+                >
                     <Box>
                         <Heading>
                             <Box>Dive in! There are so many things to do in Meeutup</Box>
@@ -85,7 +93,13 @@ const Banner = () => {
             </Container>
         </Box>
         <Container maxW="container.xl" mt={10}>
-            <Grid templateColumns="repeat(3, 1fr)" gap="4">
+            <Grid 
+                templateColumns={{
+                    sm: "repeat(1, 1fr)",
+                    md: "repeat(2, 1fr)",
+                    base: "repeat(1, 1fr)"
+                }} 
+                gap="4">
                 <GridItem>
                     Make new friend
                     <Image w="100%" borderRadius="lg" src={ImageOne} alt="image-three"/>
@@ -131,7 +145,13 @@ const Banner = () => {
             </Flex>
         </Container>
         <Container maxW="container.xl" mt={10}>
-            <Grid templateColumns="repeat(2, 1fr)" gap={6}>
+            <Grid 
+                templateColumns={{
+                    sm: "repeat(1, 1fr)",
+                    md: "repeat(2, 1fr)",
+                    base: "repeat(1, 1fr)"
+                }} 
+                gap={6}>
                 <GridItem>
                     <Heading as="h3" size="lg" mb="7">What do you want to do?</Heading>
                     <Flex alignContent="center" w="100%">
