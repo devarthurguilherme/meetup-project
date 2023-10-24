@@ -33,7 +33,13 @@ const Popular = () => {
          </Link>
        </Box>
      </Box>
-     <Grid templateColumns="repeat(3, 1fr)" gap={6}>
+     <Grid templateColumns={{
+            sm: "repeat(1, 1fr)",
+            md: "repeat(3, 1fr)",
+            lg: "repeat(3, 1fr)",
+            xl: "repeat(3, 1fr)",
+            base: "repeat(1, 1fr)"
+                        }} gap={6}>
        {Groups.map((group) => {
          return(
             <GridItem

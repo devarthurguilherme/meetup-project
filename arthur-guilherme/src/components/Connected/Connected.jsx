@@ -23,7 +23,15 @@ const Connected = () => {
                 justify-content="space-between"
                 alignItems="center"
             >
-                <Box>
+                <Box
+                    display={{
+                        sm: "none",
+                        md: "block",
+                        lg: "block",
+                        xl: "block",
+                        base: "none"
+                    }} 
+                >
                     <Image w="260px" src={deviceLeft}/>
                 </Box>
                 <Box pos="relative" mx="auto" align="center">
@@ -31,12 +39,20 @@ const Connected = () => {
                     <Heading as="h6" size="md" my="7">
                         Stay connected. <br /> Download the app.
                     </Heading>
-                    <Box d="flex">
-                        <Image w="180px" p="5" src={androidAppstore}/>
-                        <Image w="180px" p="5" src={iosAppstore}/>
-                    </Box>
+                    <Flex justifyContent="center" alignItems="center">
+                        <Image w="100px" p="5" src={androidAppstore}/>
+                        <Image w="100px" p="5" src={iosAppstore}/>
+                    </Flex>
                 </Box>
-                <Box>
+                <Box
+                    display={{
+                        sm: "none",
+                        md: "block",
+                        lg: "block",
+                        xl: "block",
+                        base: "none"
+                    }} 
+                >
                     <Image w="260px" right="0" src={deviceRight}/>
                 </Box>
             </Flex>

@@ -32,7 +32,13 @@ const Stories = () => {
             </Box>
           </Box>
         </Box>
-        <Grid mt="10" mb="40" templateColumns="repeat(3, 1fr)" gap={6}>
+        <Grid mt="10" mb="40" templateColumns={{
+                sm: "repeat(2, 1fr)",
+                md: "repeat(2, 1fr)",
+                lg: "repeat(4, 1fr)",
+                xl: "repeat(4, 1fr)",
+                base: "repeat(1, 1fr)"
+              }} gap={6}>
             {
                 StoriesData.map((story) =>{
                     return(

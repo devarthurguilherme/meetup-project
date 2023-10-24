@@ -97,6 +97,8 @@ const Banner = () => {
                 templateColumns={{
                     sm: "repeat(1, 1fr)",
                     md: "repeat(2, 1fr)",
+                    lg: "repeat(3, 1fr)",
+                    xl: "repeat(3, 1fr)",
                     base: "repeat(1, 1fr)"
                 }} 
                 gap="4">
@@ -154,8 +156,28 @@ const Banner = () => {
                 gap={6}>
                 <GridItem>
                     <Heading as="h3" size="lg" mb="7">What do you want to do?</Heading>
-                    <Flex alignContent="center" w="100%">
-                        <Box flexBasis="" w="100%" mr="2">
+                    <Flex
+                        flexDirection={{
+                            sm: "column",
+                            md: "row",
+                            base: "column"
+                        }} 
+                        alignContent="center" w="100%">
+                        <Box flexBasis={{
+                            sm: "100%",
+                            md: "50%",
+                            lg: "50%",
+                            xl: "50%",
+                            base: "100%"
+                        }} 
+                        w="100%" 
+                        mr={{
+                            sm: "0",
+                            md: "2",
+                            lg: "2",
+                            xl: "2",
+                            base: "0"
+                        }}>
                             <FormControl>
                                 <Box pos="relative">
                                     <Input 
@@ -187,7 +209,13 @@ const Banner = () => {
                                 </Box>
                             </FormControl>
                         </Box>
-                        <Box flexBasis="" w="100%">
+                        <Box flexBasis={{
+                            sm: "100%",
+                            md: "50%",
+                            lg: "50%",
+                            xl: "50%",
+                            base: "100%"
+                        }} w="100%">
                             <FormControl>
                                 <Box pos="relative">
                                     <Input 
@@ -202,7 +230,7 @@ const Banner = () => {
                                         top="3"
                                         left="2"
                                     >
-                                        <svg
+                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="18"
                                             height="18"
@@ -211,10 +239,10 @@ const Banner = () => {
                                             >
                                             <path
                                                 fillRule="evenodd"
-                                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
                                                 clipRule="evenodd"
                                             />
-                                        </svg>
+                                            </svg>
                                     </Box>
                                 </Box>
                             </FormControl>

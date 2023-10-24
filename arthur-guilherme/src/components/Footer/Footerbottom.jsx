@@ -32,8 +32,24 @@ const Footerbottom = () => {
           </Button>
         </Flex>
         <Divider my="10" />
-        <Flex alignItems="top">
-          <Box flex="1">
+        <Flex
+          flexDirection={{
+            sm: "column",
+            md: "row",
+            lg: "row",
+            xl: "row",
+            base: "column"
+          }} 
+          alignItems="top">
+          <Box flex="1"
+            mb={{
+              sm: "10",
+              md: "0",
+              lg: "0",
+              xl: "0",
+              base: "4"
+            }}
+          >
             <Heading size="sm">Your Account</Heading>
             <List mt="4" spacing={2}>
                 {YourAccount.map((link) => {
@@ -45,7 +61,15 @@ const Footerbottom = () => {
                 })}
             </List>
           </Box>
-          <Box flex="1">
+          <Box flex="1"
+            mb={{
+            sm: "10",
+            md: "0",
+            lg: "0",
+            xl: "0",
+            base: "4"
+          }}
+          >
             <Heading size="sm">Discover</Heading>
             <List mt="4" spacing={2}>
                 {Discover.map((link) => {
@@ -57,7 +81,15 @@ const Footerbottom = () => {
                 })}
             </List>
           </Box>
-          <Box flex="1">
+          <Box flex="1"
+             mb={{
+              sm: "10",
+              md: "0",
+              lg: "0",
+              xl: "0",
+              base: "4"
+            }}
+          >
             <Heading size="sm">Meetup</Heading>
             <List mt="4" spacing={2}>
                 {Meetup.map((link) => {
@@ -72,7 +104,24 @@ const Footerbottom = () => {
         </Flex>
 
         {/* follow and app icons */}
-        <Flex mt="15" d="flex" justifyContent="space-between">
+        <Flex 
+           flexDirection={{
+            sm: "column",
+            md: "row",
+            lg: "row",
+            xl: "row",
+            base: "column"
+          }}
+            mt="15" 
+            justifyContent="space-between"
+           alignItems={{
+              sm: "left",
+              md: "center",
+              lg: "center",
+              xl: "center",
+              base: "left"
+            }}
+          >
           <Box>
             <Box mb="2">Follow us</Box>
             <Flex>
@@ -124,14 +173,28 @@ const Footerbottom = () => {
               </Link>
             </Flex>
           </Box>
-          <Flex>
+          <Flex
+            mt={{
+              sm: "10",
+              md: "0",
+              lg: "0",
+              xl: "0",
+              base: "4"
+            }}
+          >
             <Image w="128px" p="3" src={androidAppstore}></Image>
             <Image w="128px" p="3" src={iosAppstore}></Image>
           </Flex>
         </Flex>
 
         {/* bottom links */}
-        <Box d="flex" mt="20">
+        <Flex mt="20" flexWrap={{
+            sm: "wrap",
+            md: "no-wrap",
+            lg: "no-wrap",
+            xl: "no-wrap",
+            base: "wrap"
+          }}>
           {' '}
           <Link mr="5" fontSize="sm">
             © 2021 Meetup
@@ -148,7 +211,7 @@ const Footerbottom = () => {
           <Link mr="5" fontSize="sm">
             Help
           </Link>
-        </Box>
+        </Flex>
       </Container>
     </Box>
   )
